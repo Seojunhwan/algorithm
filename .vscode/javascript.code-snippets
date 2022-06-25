@@ -1,0 +1,21 @@
+{
+	"[boj]": {
+	  "scope": "javascript",
+	  "prefix": "boj",
+	  "body": [
+			"const { readFileSync } = require('fs');",
+			"\n",
+			"const stdin = readFileSync(",
+			" process.platform === 'linux' ? '/dev/stdin' : __dirname + '/example.txt')",
+			".toString()",
+			".trim()",
+			".split('\\n');",
+			"\n",
+			"const input = (() => {",
+			"let i = 0;",
+			"  return () => stdin[i++];",
+			"})();",
+	  ],
+	  "description": "boj boilerplate 입니당"
+	}
+  }
